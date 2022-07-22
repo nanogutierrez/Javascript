@@ -1,0 +1,24 @@
+.cakes {
+    color: rgb(169, 99, 99);
+    background-color: rgb(240, 206, 212);
+}
+.pies {
+    color: rgba(191, 191, 101, 0.801);
+    background-color: rgb(240, 206, 212);
+}
+.pudin {
+    color: rgb(219, 154, 33);
+    background-color: rgb(240, 206, 212);
+}
+.chocolate {
+    color: rgb(77, 28, 28);
+    background-color: rgb(240, 206, 212);
+}
+
+.error {
+    color: red;
+}
+
+.aprobado {
+    color: green;
+}
