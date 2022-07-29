@@ -15,6 +15,9 @@ for (const producto of productos) {
     contenedor.append(li);
 }
 
+localStorage.setItem("productos", JSON.stringify(productos));
+
+console.log(JSON.parse(productos));
 
 let saludo = document.getElementById("saludo");
 
@@ -56,3 +59,12 @@ function validarFormulario(e){
     e.target.children[2].value = "";
   }
 }
+
+const budines = [
+    { id: 1, nombre: "marmolado", precio: 600 },
+    { id: 2, nombre: "vainilla", precio: 500 },
+];
+
+localStorage.setItem("budines", JSON.stringify(budines));
+
+console.log(JSON.parse(budines));
