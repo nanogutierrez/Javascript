@@ -15,9 +15,6 @@ for (const producto of productos) {
     contenedor.append(li);
 }
 
-localStorage.setItem("productos", JSON.stringify(productos));
-
-console.log(JSON.parse(productos));
 
 let saludo = document.getElementById("saludo");
 
@@ -60,11 +57,29 @@ function validarFormulario(e){
   }
 }
 
-const budines = [
-    { id: 1, nombre: "marmolado", precio: 600 },
-    { id: 2, nombre: "vainilla", precio: 500 },
-];
+Swal.fire(
+    'Genial',
+    'Estos son nuestros productos!',
+    'success'
+  )
 
-localStorage.setItem("budines", JSON.stringify(budines));
+ let button = document.getElementById ("btn");
 
-console.log(JSON.parse(budines));
+ button.addEventListener("click", () => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Tu Pedido/Consulta se registró correctamente. Te contactaremos a la brevedad'
+      })
+ });
