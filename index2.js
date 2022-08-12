@@ -1,6 +1,25 @@
+const lista = document.getElementById("lista");
+
+fetch("./data.json")
+.then(response => response.json())
+.then(productos => {
+  productos.forEach(producto => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <h4>${producto.nombre}</h4>
+    <p>${producto.precio}</p>
+    <p>${producto.id}</p>
+    <hr />
+  `;
+  lista.append(li);
+});
+});
+
+
+
 let contenedor = document.getElementById("container");
 let productos = [
-    { id: 1, nombre: "lemon pie", precio: 1100 },
+    { id: 1, nombre: "chocotorta", precio: 1100 },
     { id: 2, nombre: "marquise", precio: 1300 },
     { id: 3, nombre: "cheese cake", precio: 1500 },
     { id: 4, nombre: "mousse de chocolate", precio: 1700 },

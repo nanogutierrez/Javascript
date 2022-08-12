@@ -1,0 +1,6 @@
+[
+    { "id": 1, "nombre": "cabsha", "precio": 900 },
+    { "id": 2, "nombre": "manzana", "precio": 1000 },
+    { "id": 3, "nombre": "frutilla", "precio": 1100 },
+    { "id": 4, "nombre": "lemon pie", "precio": 1200 }
+]
