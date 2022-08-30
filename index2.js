@@ -57,7 +57,7 @@ if(seccion === "tortas"){
 
 
 
-let formulario = document.getElementById("formulario");
+let formulario = document.getElementById("formulario-1");
 formulario.addEventListener("submit", validarFormulario);
 
 function validarFormulario(e){
