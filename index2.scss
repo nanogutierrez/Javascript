@@ -1,0 +1,476 @@
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "productos"
+        "precios"
+        "sucursal"
+        "contacto"
+        "asociate"
+        "footer";
+
+    grid-template-columns: 100%;
+    grid-template-rows: 300px min max(200px, 400px) 300px min max(400px, 200px) 300px min max(400px, 200px) 150px min max(200px, 100px) 300px min max(400px, 200px) 200px min max(300px, 150px) 150px;
+    grid-column-gap: 300px;
+    grid-row-gap: 200px;
+    max-width: 2000px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(172, 207, 158, 0.221);
+    display: inline-block;
+}
+
+@media screen and (max-width: 1199px) {
+    #grilla {
+        grid-template-areas:
+            "header"
+            "productos"
+            "precios"
+            "sucursal"
+            "contacto"
+            "asociate"
+            "footer";
+
+        grid-template-columns: repeat (100%);
+        grid-template-rows: repeat (7, 12%);
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #grilla {
+        grid-template-areas:
+            "header"
+            "productos"
+            "precios"
+            "sucursal"
+            "contacto"
+            "asociate"
+            "footer";
+
+        grid-template-rows: repeat (100%);
+        grid-template-columns: repeat (100%);
+        width: 100%;
+    }
+}
+
+
+.border {
+    border: 3px solid black;
+}
+
+section#productos {
+    grid-area: productos;
+}
+
+section#precios {
+    grid-area: precios;
+}
+
+section#sucursal {
+    grid-area: sucursal;
+}
+
+section#contacto {
+    grid-area: contacto;
+}
+
+section#asociate {
+    grid-area: asociate;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(247, 138, 138, 0.822);
+}
+
+footer {
+    font-size: 20px;
+}
+
+span {
+    font-size: 30px;
+    color: rgb(87, 104, 232);
+    width: bold;
+}
+
+header {
+    grid-area: header;
+    background-size: 120%;
+    font-size: 35px;
+    transition: transform 0.3s;
+    background-color: black;
+
+    &:hover {
+        transform: transition;
+        @if expr {
+            
+        }
+        background-image: url(https://e7.pngegg.com/pngimages/878/700/png-clipart-watercolor-background-smoke-black.png);
+    }
+}
+
+
+header #titulo h1 {
+    color: rgb(244, 118, 118);
+    font-size: 45px;
+    font-weight: bold;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(100px, 10px);
+    }
+}
+
+
+
+#productos h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+$subtitle-font:"Nunito Sans";
+
+#tortas {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}
+
+#tortas:hover {
+    transform: rotate(2deg);
+}
+
+#tartas {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#budines {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#chocolates {
+    color: rgb(163, 106, 106);
+    font-family: $subtitle-font;
+    transition: transform 0.3s;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+#precios h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+#sucursal h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+
+}
+
+
+#contacto h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+
+#asociate h2 {
+    color: rgba(209, 81, 81, 0.696);
+    background-color: rgb(247, 234, 234);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translate(5px, 5px);
+    }
+}
+
+
+
+#imagen1 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    height: 90%;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+#imagen2 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+#imagen3 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#imagen4 {
+    filter: blur(2px);
+    filter: grayscale(0.5);
+    transition: transform 0.3s;
+    position: relative;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    height: auto;
+
+    &:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        cursor: pointer;
+        filter: grayscale(0);
+        outline: solid 3px;
+        filter: blur(0px);
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+input[type=checkbox] {
+    transition: all 0.5s;
+}
+
+input[type=checkbox]:checked {
+    width: 64px;
+    height: 64px;
+}
+
+input {
+    transition: all 0.5s;
+}
+
+input:focus {
+    background-color: rgb(210, 225, 239);
+}
+
+#boton-asociate {
+    background-color: rgb(120, 186, 122)
+}
+
+.contenedor-cards {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-cards .card1 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-cards .card2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-cards .card3 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-cards .card4 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+#formulario-1 {
+    position: relative;
+    margin: 0 auto;
+    padding: 0.5em 0.5em 0.5em;
+    box-sizing: border-box;
+    background: rgba(246, 244, 218, 0.874) url(background.jpg);
+    border: solid 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 650px;
+}
+
+#formulario-2 {
+    @extend #formulario-1;
+    height: 500px;
+}
+
+legend {
+    position: relative;
+    right: 0;
+    background-color: #c2edc4d2;
+    margin-top: 0.2px;
+    text-align: center;
+}
+
+label {
+    font: 1.2em "typewriter", sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input:focus,
+textarea:focus {
+    background: rgba(41, 39, 39, 0.1);
+    border-radius: 5px;
+}
+
+
+textarea {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    height: 35%;
+    margin-bottom: 15px;
+}
+
+div #terminos {
+    margin-bottom: 2px;
+    margin-top: 30px;
+}
+
+$promocion: hotsale;
+
+#tortas {
+    @if $promocion==hotsale {
+        color: black;
+        background-color: rgb(240, 138, 120);
+    }
+    @else {
+        display: none
+    }
+}

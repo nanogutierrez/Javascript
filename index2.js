@@ -102,3 +102,18 @@ Swal.fire(
         title: 'Tu Pedido/Consulta se registró correctamente. Te contactaremos a la brevedad'
       })
  });
+ 
+ const products = [
+    { id: 1, nombre: "chocotorta", precio: 1100 },
+    { id: 2, nombre: "marquise", precio: 1300 },
+    { id: 3, nombre: "cheese cake", precio: 1500 },
+    { id: 4, nombre: "mousse de chocolate", precio: 1700 },
+ ];
+
+ const guardar = (clave, valor) => {localStorage.setItem(clave, valor);}
+
+ for(const product of products) { 
+  guardar(product.id, JSON.stringify(product))
+}
+
+localStorage.setItem("products", JSON.stringify(products));
